@@ -75,6 +75,14 @@ public class RegistrationActivity extends AppCompatActivity {
             layoutEmail.setError(emptyFieldError);
         } else if (phone.getText().toString().isEmpty()) {
             layoutPhone.setError(emptyFieldError);
+        } else if (childLastName.getText().toString().isEmpty()) {
+            layoutChildLastName.setError(emptyFieldError);
+        } else if (childRegistrationLogin.getText().toString().isEmpty()) {
+            layoutRegLogin.setError(emptyFieldError);
+        } else if (childRegistrationPassword.getText().toString().isEmpty()) {
+            layoutRegPassword.setError(emptyFieldError);
+        } else if (dateOfBirth.getText().toString().isEmpty()) {
+            layoutDob.setError(emptyFieldError);
         } else {
             layoutFirstName.setErrorEnabled(false);
             layoutlastName.setErrorEnabled(false);
@@ -84,16 +92,7 @@ public class RegistrationActivity extends AppCompatActivity {
             Log.i(TAG, "registrate: lastName " + lastName.getText().toString());
             Log.i(TAG, "registrate: email " + email.getText().toString());
             Log.i(TAG, "registrate: phone " + phone.getText().toString());
-        }
-        if (childLastName.getText().toString().isEmpty()) {
-            layoutChildLastName.setError(emptyFieldError);
-        } else if (childRegistrationLogin.getText().toString().isEmpty()) {
-            layoutRegLogin.setError(emptyFieldError);
-        } else if (childRegistrationPassword.getText().toString().isEmpty()) {
-            layoutRegPassword.setError(emptyFieldError);
-        } else if (dateOfBirth.getText().toString().isEmpty()) {
-            layoutDob.setError(emptyFieldError);
-        } else {
+
             layoutChildLastName.setErrorEnabled(false);
             layoutRegLogin.setErrorEnabled(false);
             layoutRegPassword.setErrorEnabled(false);
@@ -102,9 +101,9 @@ public class RegistrationActivity extends AppCompatActivity {
             Log.i(TAG, "registrate: childRegistrationLogin " + childRegistrationLogin.getText().toString());
             Log.i(TAG, "registrate: childRegistrationPassword " + childRegistrationPassword.getText().toString());
             Log.i(TAG, "registrate: dateOfBirth " + dateOfBirth.getText().toString());
+            Toast.makeText(this, " registration comleted", Toast.LENGTH_LONG).show();
 
         }
-        Toast.makeText(this, " registration comleted", Toast.LENGTH_LONG).show();
     }
 
     @OnClick(R.id.add_kids)
