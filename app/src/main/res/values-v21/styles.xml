@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme.Login">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:colorAccent">@android:color/white</item>
+        <item name="android:windowBackground">@color/colorPrimary</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:buttonStyle">@style/Widget.Button.LoginBtn</item>
+        <item name="android:editTextStyle">@style/Widget.EditText.LoginEditText</item>
+    </style>
+
+</resources>

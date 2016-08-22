@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.calculator">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id" />
+
+        <activity android:name=".ui.activity.CalculatorActivity">
+
+        </activity>
+        <activity
+            android:name=".ui.activity.LoginActivity"
+            android:theme="@style/AppTheme.Login">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activity.RecoverActivity"
+            android:theme="@style/AppTheme.Login" />
+        <activity
+            android:name=".ui.activity.RegistrationActivity"
+            android:theme="@style/AppTheme.Login" />
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!--<meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="8387235511e2b2d512a1f7ecd0881dde70fb7b0f" />-->
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="8387235511e2b2d512a1f7ecd0881dde70fb7b0f" />
+    </application>
+
+</manifest>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/login_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="com.calculator.ui.activity.LoginActivity">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_perm_identity_white_24px"
+            android:hint="@string/account_name_sample" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:drawableStart="@drawable/ic_enhanced_encryption_white_24px"
+            android:hint="@string/password_sample"
+            android:inputType="textPassword" />
+
+        <TextView
+            android:id="@+id/recovery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_10dp"
+            android:gravity="end"
+            android:padding="@dimen/padding_10dp"
+            android:text="@string/forgotten_password"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/log_in"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:text="@string/send" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal">
+            <!--todo correct spelling-->
+            <TextView
+                android:id="@+id/log_in_fb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/padding_10dp"
+                android:drawableTop="@drawable/facebook_logo"
+                android:gravity="center"
+                android:text="@string/login_with_facebook" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="fill_parent"
+                android:background="@android:color/holo_blue_light" />
+
+            <TextView
+                android:id="@+id/log_in_gp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/padding_10dp"
+                android:drawableTop="@drawable/google_plus_logo"
+                android:gravity="center"
+                android:text="@string/login_with_google" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="fill_parent"
+                android:background="@android:color/holo_blue_light" />
+
+            <TextView
+                android:id="@+id/log_in_twt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawablePadding="@dimen/padding_10dp"
+                android:drawableTop="@drawable/twitter_logo"
+                android:gravity="center"
+                android:text="@string/login_with_twitter" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/registration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="25dp"
+            android:text="@string/registration"
+            android:textSize="15sp" />
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>
