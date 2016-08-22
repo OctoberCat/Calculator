@@ -34,7 +34,7 @@ public class FactorialFragment extends Fragment {
 
     @OnClick(R.id.factorial_btn)
     void calculate() {
-        long n = Integer.valueOf(inputPalindrome.getText().toString());
+        long n = Long.valueOf(inputPalindrome.getText().toString());
         int factSum = findFactorialSum(n);
         factAnswer.setText(String.valueOf(factSum));
     }
@@ -57,7 +57,7 @@ public class FactorialFragment extends Fragment {
     }
 
     int[] factorialOf(long n) {
-        int[] res = new int[200];// just for sure
+        int[] res = new int[800];// just for sure
         res[0] = 1;// initial
 
         for (int i = 1; i <= n; i++) {
@@ -73,7 +73,7 @@ public class FactorialFragment extends Fragment {
     }
 
     int findSum(int[] factArr) {
-
+/*/**/
         int sum = 0;
         for (int aFactArr : factArr) {
             if (aFactArr == 0)

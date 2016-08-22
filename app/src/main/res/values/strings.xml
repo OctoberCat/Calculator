@@ -29,4 +29,6 @@
     <string name="add_kids">More kids can be added</string>
     <string name="facebook_app_id">1150993768307096</string>
     <string name="empty_field_err">this field should not be empty</string>
+    <string name="no_pairs">Input doesn\'t consist correct pairs</string>
+    <string name="pairs_only">provide only pairs and more than one pair</string>
 </resources>

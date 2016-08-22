@@ -47,7 +47,7 @@ public class PalindromeFragment extends Fragment {
             inputLayoutPalindrome.setError("Invalid input. Fill this field, please");
         } else {
             inputLayoutPalindrome.setErrorEnabled(false);
-            int number = Integer.valueOf(inputPalindrome.getText().toString());
+            long number = Long.valueOf(inputPalindrome.getText().toString());
             if (isPalindrome(number)) {
                 palindromeAnswer.setText(palCorrect);
             } else {
@@ -56,9 +56,9 @@ public class PalindromeFragment extends Fragment {
         }
     }
 
-    boolean isPalindrome(int num) {
-        int original = num;
-        int reverse = 0;
+    boolean isPalindrome(long num) {
+        long original = num;
+        long reverse = 0;
         while (original > 0) {
             reverse = reverse * 10 + original % 10;
             original /= 10;

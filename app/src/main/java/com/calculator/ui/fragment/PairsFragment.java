@@ -17,6 +17,7 @@ import java.util.Arrays;
 import java.util.ListIterator;
 
 import butterknife.Bind;
+import butterknife.BindString;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
@@ -30,6 +31,10 @@ public class PairsFragment extends Fragment {
     EditText input_pairs;
     @Bind(R.id.pairs_answer)
     TextView answer;
+    @BindString(R.string.no_pairs)
+    String noPairs;
+    @BindString(R.string.pairs_only)
+    String pairsOnly;
     private final String TAG = PairsFragment.class.getSimpleName();
 
     @Override
@@ -70,7 +75,7 @@ public class PairsFragment extends Fragment {
             strings = input_pairs.getText().toString().split(" ");
             //ArrayList<int[]> list = new ArrayList<>();
             Log.i(TAG, "input String: " + Arrays.toString(strings));
-            if (strings.length % 2 == 0) {
+            if (strings.length % 2 == 0 && strings.length > 2) {
                 inputLayout.setErrorEnabled(false);
 
                 int[][] pairs = new int[strings.length / 2][2];
@@ -87,9 +92,13 @@ public class PairsFragment extends Fragment {
                 Log.i(TAG, "pairs input: " + Arrays.deepToString(pairs));
 
                 int[][] result = findSublist(pairs);
-                answer.setText(Arrays.deepToString(result));
+                if (result.length == 0) {
+                    answer.setText(noPairs);
+                } else {
+                    answer.setText(Arrays.deepToString(result));
+                }
             } else {
-                inputLayout.setError("provide pairs only");
+                inputLayout.setError(pairsOnly);
             }
         } catch (NumberFormatException e) {
             inputLayout.setError("Invalid input!");
